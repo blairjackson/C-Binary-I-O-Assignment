@@ -35,6 +35,9 @@ int main(int argc, char** argv) {
 
     } else {
         cout << " the file must've opened...." << endl;
+        
+        infile >> "holy shit that was too easy";
+        infile >> "\n something must be wrong?";
     }
 
     return 0;
