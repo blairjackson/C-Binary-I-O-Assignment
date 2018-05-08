@@ -26,19 +26,20 @@ using namespace std;
 int main(int argc, char** argv) {
 
    // make sure the file already it exists, binary does not create one if it is not found
-    
-    ifstream infile;
-    infile.open("testing.txt", ios::binary | ios::in);
+    char buffer [100];
+    strcpy(buffer, "heyo mutha fucka");
+    fstream infile;
+    infile.open("testing.txt", ios::binary | ios::in | ios::out);
 
     if (!infile.is_open()) {
         cout << " doesn't seem to have opened correctly" << endl;
 
     } else {
         cout << " the file must've opened...." << endl;
-        
-        infile >> "holy shit that was too easy";
-        infile >> "\n something must be wrong?";
+        //figure out how to input to file, im too tired right now
+        infile.write(buffer, 100);
     }
+    infile.close();
 
     return 0;
 }
