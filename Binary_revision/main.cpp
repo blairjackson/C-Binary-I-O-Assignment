@@ -23,8 +23,18 @@ using namespace std;
  */
 int main(int argc, char** argv) {
 
-    ifstream infile;
+   // make sure the file already it exists, binary does not create one if it is not found
     
+    ifstream infile;
+    infile.open("testing.txt", ios::binary | ios::in);
+
+    if (!infile.is_open()) {
+        cout << " doesn't seem to have opened correctly" << endl;
+
+    } else {
+        cout << " the file must've opened...." << endl;
+    }
+
     return 0;
 }
 
