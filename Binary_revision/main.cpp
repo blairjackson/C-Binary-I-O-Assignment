@@ -36,9 +36,9 @@ int main(int argc, char** argv) {
     blair.set_person("Blair", "Jackson" , 29);
     blair.print_person();
     blair.info();
-    
-    ifstream infile;
-    infile.open("testing.txt", ios::binary | ios::in);
+  
+    fstream infile;
+    infile.open("testing.txt", ios::binary | ios::in | ios::out);
 
     if (!infile.is_open()) {
         cout << " doesn't seem to have opened correctly" << endl;
@@ -46,6 +46,7 @@ int main(int argc, char** argv) {
     } else {
         cout << " the file must've opened...." << endl;
         
+       // infile.write((char*)&persons, sizeof(persons));
         
        
     }

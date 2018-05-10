@@ -25,6 +25,7 @@ public:
     void set_person(string first, string last, int age);
     void print_person();
     void info();
+    vector get_vec();
 private:
     struct person{
        string fname, lname;
