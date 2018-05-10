@@ -16,6 +16,8 @@
 #include <fstream>
 #include <iostream>
 
+#include "Person.h" 
+
 using namespace std;
 
 /*
@@ -24,6 +26,12 @@ using namespace std;
 int main(int argc, char** argv) {
 
    // make sure the file already it exists, binary does not create one if it is not found
+    
+    Person blair;
+    
+    blair.add_to_vec();
+    blair.set_person("Blair", "Jackson" , 29);
+    blair.print_person();
     
     ifstream infile;
     infile.open("testing.txt", ios::binary | ios::in);
