@@ -48,4 +48,18 @@ void Person::print_person(){
     cout << persons[0].fname << endl;
     cout << persons[0].lname << endl;
     cout << persons[0].age << endl;
+    
+}
+
+void Person::info(){
+    int v_size = persons.size();
+    
+    cout << "vector size: " << v_size << endl;
+    
+    int len_fname = (persons[0].fname.size() * sizeof(char));
+    int len_lname = (persons[0].lname.size() * sizeof(char));
+    cout << "fname size: " << len_fname << endl;
+    cout << "lname size: " << len_lname << endl;
+    cout << persons[0].age;
+    
 }

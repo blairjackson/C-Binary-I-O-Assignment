@@ -35,6 +35,7 @@ int main(int argc, char** argv) {
     blair.add_to_vec();
     blair.set_person("Blair", "Jackson" , 29);
     blair.print_person();
+    blair.info();
     
     ifstream infile;
     infile.open("testing.txt", ios::binary | ios::in);
@@ -44,7 +45,8 @@ int main(int argc, char** argv) {
 
     } else {
         cout << " the file must've opened...." << endl;
-        //figure out how to input to file, im too tired right now
+        
+        
        
     }
     infile.close();

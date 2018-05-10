@@ -24,6 +24,7 @@ public:
     void add_to_vec();
     void set_person(string first, string last, int age);
     void print_person();
+    void info();
 private:
     struct person{
        string fname, lname;
