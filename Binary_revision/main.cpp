@@ -19,13 +19,16 @@
 #include "Person.h" 
 
 using namespace std;
-
+//git test
+//new git test
+//
 /*
  * 
  */
 int main(int argc, char** argv) {
 
    // make sure the file already it exists, binary does not create one if it is not found
+
     
     Person blair;
     
@@ -41,7 +44,10 @@ int main(int argc, char** argv) {
 
     } else {
         cout << " the file must've opened...." << endl;
+        //figure out how to input to file, im too tired right now
+       
     }
+    infile.close();
 
     return 0;
 }
