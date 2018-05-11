@@ -14,11 +14,12 @@
 #ifndef FILE_HANDLER_H
 #define FILE_HANDLER_H
 
-class File_handler {
+class File_handler: protected Person {
 public:
     File_handler();
     File_handler(const File_handler& orig);
     virtual ~File_handler();
+    void write_to_file();
 private:
 
 };

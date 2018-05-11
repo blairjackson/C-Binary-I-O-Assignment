@@ -17,6 +17,7 @@
 #include <iostream>
 
 #include "Person.h" 
+#include "File_handler.h"
 
 using namespace std;
 //git test
@@ -32,25 +33,15 @@ int main(int argc, char** argv) {
     
     Person blair;
     
+    
     blair.add_to_vec();
     blair.set_person("Blair", "Jackson" , 29);
     blair.print_person();
     blair.info();
-  
-    fstream infile;
-    infile.open("testing.txt", ios::binary | ios::in | ios::out);
+   
+    
+   
 
-    if (!infile.is_open()) {
-        cout << " doesn't seem to have opened correctly" << endl;
-
-    } else {
-        cout << " the file must've opened...." << endl;
-        
-       // infile.write((char*)&persons, sizeof(persons));
-        
-       
-    }
-    infile.close();
 
     return 0;
 }
