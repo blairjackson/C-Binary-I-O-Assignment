@@ -26,7 +26,10 @@ public:
     void set_person(string first, string last, int age);
     void print_person();
     void info();
+    void save_info();
+    void read_info();
 private:
+    string filename = "testing.txt";
     struct person{
        string fname, lname;
        int age;

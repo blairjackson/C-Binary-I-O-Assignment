@@ -32,13 +32,15 @@ int main(int argc, char** argv) {
 
     
     Person blair;
+    File_handler filer;
     
     
     blair.add_to_vec();
     blair.set_person("Blair", "Jackson" , 29);
     blair.print_person();
     blair.info();
-   
+    filer.write_to_file();
+    blair.save_info();
     
    
 

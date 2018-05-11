@@ -14,7 +14,7 @@
 #ifndef FILE_HANDLER_H
 #define FILE_HANDLER_H
 
-class File_handler: protected Person {
+class File_handler: public Person {
 public:
     File_handler();
     File_handler(const File_handler& orig);

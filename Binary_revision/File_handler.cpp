@@ -33,6 +33,8 @@ void File_handler::write_to_file() {
 
     fstream infile;
     infile.open("testing.txt", ios::binary | ios::in | ios::out);
+    
+    int v_size = persons.size();
 
     if (!infile.is_open()) {
         cout << " doesn't seem to have opened correctly" << endl;
@@ -40,8 +42,9 @@ void File_handler::write_to_file() {
     } else {
         cout << " the file must've opened...." << endl;
 
-        infile.write((char*)&persons, sizeof(persons));
+      // infile.write((char*)&persons, sizeof(persons));
 
+        cout << "vector size in filer: " << v_size << endl;
 
     }
     infile.close();

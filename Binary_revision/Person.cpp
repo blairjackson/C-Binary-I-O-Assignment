@@ -61,8 +61,38 @@ void Person::info(){
     int len_lname = (persons[0].lname.size() * sizeof(char));
     cout << "fname size: " << len_fname << endl;
     cout << "lname size: " << len_lname << endl;
-    cout << persons[0].age;
+    cout << persons[0].age << endl;
     
 }
 
+void Person::save_info(){
+    
+    ofstream out(filename, ios::binary);
+    size_t size = persons.size();
+    out.write(reinterpret_cast<char*>(&size), sizeof(size_t));
+    
+    for(auto& pers : persons){
+        size = pers.fname.size();
+        out.write(reinterpret_cast<char*>(&size), sizeof(size_t));
+        out.write(pers.fname.c_str(), size);
+        
+        size = pers.lname.size();
+        out.write(reinterpret_cast<char*>(&size), sizeof(size_t));
+        out.write(pers.lname.c_str(), size);
+        
+        size = sizeof(int);
+        out.write(reinterpret_cast<char*>(&size), sizeof(size_t));
+        out.write(reinterpret_cast<char*>(&pers.age), size);
+    }
+    out.close();
+}
 
+void Person::read_info(){
+    
+    ifstream input_file(filename, ios::binary);
+    vector<persons> persons_in;
+    input_file.read((char*)&persons_in, sizeof(persons_in));  
+    
+    
+    cout << "read in : " << persons_in[0].fname << endl;
+}
