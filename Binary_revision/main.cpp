@@ -41,7 +41,8 @@ int main(int argc, char** argv) {
     blair.info();
     filer.write_to_file();
     blair.save_info();
-    
+   
+    blair.read_info();
    
 
 
